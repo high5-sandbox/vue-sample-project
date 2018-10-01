@@ -48,6 +48,20 @@ module.exports = {
       // extracted common chunks and vendor chunks.
       chunks: ['chunk-vendors', 'chunk-common', 'todo']
     },
+    vuex: {
+      // entry for the page
+      entry: 'src/vuex/main.js',
+      // the source template
+      template: 'public/vuex.html',
+      // output as dist/index.html
+      filename: 'vuex.html',
+      // when using title option,
+      // template title tag needs to be <title><%= htmlWebpackPlugin.options.title %></title>
+      title: 'Vuex Todo Page',
+      // chunks to include on this page, by default includes
+      // extracted common chunks and vendor chunks.
+      chunks: ['chunk-vendors', 'chunk-common', 'vuex']
+    },
 
     // when using the entry-only string format,
     // template is inferred to be `public/subpage.html`
